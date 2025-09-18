@@ -170,6 +170,39 @@
         <a href="#contact">Contact</a>
       </div>
     </div>
+    <section class="section" id="diagnostics">
+  <div class="container">
+    <div class="section-head">
+      <h2>Diagnostics</h2>
+      <p>This is temporary. It checks if each image is reachable.</p>
+    </div>
+    <ul id="diag-list" style="list-style: disc; padding-left: 20px; line-height:1.8"></ul>
+  </div>
+</section>
+
+<script>
+(function(){
+  const files = [
+    'assets/tre-01.jpg','assets/tre-02.jpg','assets/tre-03.jpg','assets/tre-04.jpg','assets/tre-05.jpg',
+    'assets/tre-06.jpg','assets/tre-07.jpg','assets/tre-08.jpg','assets/tre-09.jpg','assets/tre-10.jpg'
+  ];
+  const ul = document.getElementById('diag-list');
+  function addItem(name, ok, url){
+    const li = document.createElement('li');
+    li.innerHTML = (ok ? '✅ OK ' : '❌ Not found ') +
+      `<a href="${url}" target="_blank" rel="noopener">${name}</a>`;
+    li.style.color = ok ? '#7CFC00' : '#ff6b6b';
+    ul.appendChild(li);
+  }
+  files.forEach((f) => {
+    const url = new URL(f, location.href).href;
+    fetch(url, { method: 'HEAD', cache: 'no-store' })
+      .then(res => addItem(f, res.ok, url))
+      .catch(() => addItem(f, false, url));
+  });
+})();
+</script>
+
   </footer>
 
   <div class="lightbox-backdrop" hidden>
