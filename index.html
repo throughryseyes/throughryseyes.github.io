@@ -1,77 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Through Ry’s Eyes — Photo Reachability Test</title>
-<style>
-  body{background:#0a0a0a;color:#efefef;font:16px/1.6 system-ui, -apple-system, Segoe UI, Roboto}
-  .wrap{max-width:1100px;margin:24px auto;padding:0 16px}
-  h1{font-size:1.6rem;margin:.2em 0 .6em}
-  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px}
-  figure{background:#0e0e0f;border:1px solid #1a1a1a;border-radius:12px;padding:10px}
-  img{display:block;width:100%;height:auto;border-radius:8px}
-  figcaption{font-size:.9rem;color:#aaa;margin-top:6px;word-break:break-all}
-  .err{color:#ff6b6b}
-  .ok{color:#7CFC00}
-  .note{margin:14px 0;color:#bbb}
-  code{background:#111;padding:2px 6px;border-radius:6px}
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Through Ry’s Eyes — Photography</title>
+  <meta name="description" content="Through Ry’s Eyes: low-key, black & white focused photography. Serving Ancaster, Hamilton, Oakville, Burlington, Stoney Creek, and Mississauga." />
+  <link rel="icon" href="assets/favicon.png">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div class="wrap">
-  <h1>Image Reachability Test</h1>
-  <p class="note">This page loads images directly with plain <code>&lt;img&gt;</code>. If you still see text or red errors, the files are not where the page expects them. Paths are <strong>case-sensitive</strong>.</p>
+  <header class="site-header">
+    <div class="container nav">
+      <a href="#" class="logo"><img src="assets/logo.png" alt="through ry’s eyes" style="height:34px;vertical-align:middle"></a>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+      <nav class="menu" aria-label="Primary">
+        <a href="#portfolio">Portfolio</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#contact" class="btn">Book</a>
+      </nav>
+    </div>
+  </header>
 
-  <div id="report" class="note"></div>
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <h1>Moments in monochrome.</h1>
+          <p>Low-key storytelling with a touch of spice — especially in black & white.</p>
+          <p class="areas">Ancaster • Hamilton • Oakville • Burlington • Stoney Creek • Mississauga</p>
+          <div class="hero-cta">
+            <a href="#portfolio" class="btn">See Work</a>
+            <a href="#contact" class="btn ghost">Get a Quote</a>
+          </div>
+          <ul class="badges" aria-label="Highlights">
+            <li>⏱️ 48h preview gallery</li>
+            <li>🖤 Black & white first</li>
+            <li>📷 Real, candid energy</li>
+          </ul>
+        </div>
+        <div class="hero-mosaic" aria-hidden="true">
+          <img src="assets/tre-01.jpg" alt="" loading="lazy">
+          <img src="assets/tre-02.jpg" alt="" loading="lazy">
+          <img src="assets/tre-03.jpg" alt="" loading="lazy">
+          <img src="assets/tre-04.jpg" alt="" loading="lazy">
+        </div>
+      </div>
+    </section>
 
-  <div class="grid" id="grid">
-    <!-- We test both relative and absolute paths -->
-    <figure>
-      <img src="assets/tre-01.jpg" alt="tre-01.jpg" onerror="this.replaceWith(err('assets/tre-01.jpg'))">
-      <figcaption>assets/tre-01.jpg</figcaption>
-    </figure>
-    <figure>
-      <img src="/assets/tre-01.jpg" alt="/assets/tre-01.jpg" onerror="this.replaceWith(err('/assets/tre-01.jpg'))">
-      <figcaption>/assets/tre-01.jpg</figcaption>
-    </figure>
+    <section id="portfolio" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Portfolio</h2>
+          <p>Selected frames. Tap any image to view larger.</p>
+        </div>
+        <div class="grid gallery" id="gallery">
+          <a href="assets/tre-01.jpg" class="card lightbox"><img src="assets/tre-01.jpg" alt="through ry’s eyes 1" loading="lazy"></a>
+          <a href="assets/tre-02.jpg" class="card lightbox"><img src="assets/tre-02.jpg" alt="through ry’s eyes 2" loading="lazy"></a>
+          <a href="assets/tre-03.jpg" class="card lightbox"><img src="assets/tre-03.jpg" alt="through ry’s eyes 3" loading="lazy"></a>
+          <a href="assets/tre-04.jpg" class="card lightbox"><img src="assets/tre-04.jpg" alt="through ry’s eyes 4" loading="lazy"></a>
+          <a href="assets/tre-05.jpg" class="card lightbox"><img src="assets/tre-05.jpg" alt="through ry’s eyes 5" loading="lazy"></a>
+          <a href="assets/tre-06.jpg" class="card lightbox"><img src="assets/tre-06.jpg" alt="through ry’s eyes 6" loading="lazy"></a>
+          <a href="assets/tre-07.jpg" class="card lightbox"><img src="assets/tre-07.jpg" alt="through ry’s eyes 7" loading="lazy"></a>
+          <a href="assets/tre-08.jpg" class="card lightbox"><img src="assets/tre-08.jpg" alt="through ry’s eyes 8" loading="lazy"></a>
+          <a href="assets/tre-09.jpg" class="card lightbox"><img src="assets/tre-09.jpg" alt="through ry’s eyes 9" loading="lazy"></a>
+          <a href="assets/tre-10.jpg" class="card lightbox"><img src="assets/tre-10.jpg" alt="through ry’s eyes 10" loading="lazy"></a>
+        </div>
+      </div>
+    </section>
 
-    <!-- Add the rest (02–10) -->
-    <script>
-      const grid = document.getElementById('grid');
-      function err(path){
-        const d = document.createElement('div');
-        d.className='err';
-        d.textContent = '❌ Not found: ' + path;
-        return d;
-      }
-      // Already added two for tre-01; add 02..10
-      for(let i=2;i<=10;i++){
-        const n = String(i).padStart(2,'0');
-        ['assets/tre-'+n+'.jpg','/assets/tre-'+n+'.jpg'].forEach(p=>{
-          const fig = document.createElement('figure');
-          const img = document.createElement('img');
-          img.alt = p;
-          img.src = p;
-          img.onerror = ()=> img.replaceWith(err(p));
-          fig.appendChild(img);
-          const cap = document.createElement('figcaption');
-          cap.textContent = p;
-          fig.appendChild(cap);
-          grid.appendChild(fig);
-        });
-      }
-    </script>
-  </div>
+    <section id="services" class="section alt">
+      <div class="container">
+        <div class="section-head">
+          <h2>Services</h2>
+          <p>Focused, flexible sessions. Black & white by default — colour on request.</p>
+        </div>
+        <div class="cards">
+          <div class="card service"><h3>Street</h3><p>Documentary candids with mood and motion.</p></div>
+          <div class="card service"><h3>Pet</h3><p>Personality-driven portraits of your animals.</p></div>
+          <div class="card service"><h3>Wedding</h3><p>Honest moments over heavy posing; full or partial day.</p></div>
+          <div class="card service"><h3>Portrait</h3><p>Individuals, couples, and families; on-location or studio.</p></div>
+          <div class="card service"><h3>Black & White</h3><p>Classic, timeless edits with subtle grain.</p></div>
+        </div>
+      </div>
+    </section>
 
-  <hr style="border-color:#1a1a1a;margin:18px 0">
-  <p>If any tile shows <span class="err">❌ Not found</span>, the corresponding file isn’t present at that exact path. Fixes:</p>
-  <ul>
-    <li>In your repo, open <strong>assets/</strong> and make sure filenames are exactly <code>tre-01.jpg</code> … <code>tre-10.jpg</code> (lowercase “.jpg”, leading zero).</li>
-    <li>Make sure they’re directly under <strong>/assets</strong> (not <code>/assets/assets</code> or a nested folder).</li>
-    <li>On GitHub, you can rename files in the UI (three dots → Rename). Change <code>.JPG</code> to <code>.jpg</code> if needed.</li>
-    <li>After rename, hard refresh your site (Ctrl+F5 or Cmd+Shift+R).</li>
-  </ul>
-</div>
-</body>
-</html>
+    <section id="about" class="section">
+      <div class="container about">
+        <div class="about-copy">
+          <h2>About</h2>
+          <p>Through Ry’s Eyes is about quiet moments with a little edge. I keep lighting simple, compositions clean, and edits restrained so the story stays front and center.</p>
+          <p>Based in the GTA — Ancaster • Hamilton • Oakville • Burlington • Stoney Creek • Mississauga. Available for travel.</p>
+          <div class="socials">
+            <a href="#" aria-label="Instagram">Instagram</a>
+            <a href="#" aria-label="TikTok">TikTok</a>
+            <a href="mailto:ryanfitz@live.ca" aria-label="Email">Email</a>
+          </div>
+        </div>
+        <div class="about-photo">
+          <img src="assets/tre-05.jpg" alt="Photographer portrait" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <section id="pricing" class="section alt">
+      <div class="container">
+        <div class="section-head">
+          <h2>Pricing</h2>
+          <p>Simple, transparent rates. Black &amp; white first; colour on request.</p>
+        </div>
+        <div class="cards pricing">
+          <div class="card price featured">
+            <h3>Hourly</h3>
+            <div class
