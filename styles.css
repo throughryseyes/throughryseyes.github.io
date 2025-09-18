@@ -73,3 +73,4 @@ a:hover{border-bottom-color:var(--ink)}
 .section{padding:64px 0}
 .section.alt{background:linear-gradient(180deg,rgba(255,255,255,.03),transparent)}
 .section-head h2{font-siz
+.lightbox-backdrop[hidden]{ display:none !important; }
