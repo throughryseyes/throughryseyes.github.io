@@ -37,3 +37,20 @@ document.getElementById('contactForm')?.addEventListener('submit', (e) => {
   const yourEmail = 'ryanfitz@live.ca'; // TODO: set your real email
   window.location.href = `mailto:${yourEmail}?subject=${subject}&body=${body}`;
 });
+// Close on ESC
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    document.querySelector('.lightbox-close')?.click();
+  }
+});
+
+// If the large image fails to load, auto-close the lightbox
+const lbImg = document.querySelector('.lightbox-image');
+lbImg?.addEventListener('error', () => {
+  document.querySelector('.lightbox-close')?.click();
+});
+
+// Also allow clicking the image itself to close
+lbImg?.addEventListener('click', () => {
+  document.querySelector('.lightbox-close')?.click();
+});
