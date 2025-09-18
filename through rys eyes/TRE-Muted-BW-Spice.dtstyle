@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<style version="1" name="TRE Muted B&W Spice" description="Low-key, muted-color B&W with subtle grain">
+  <category>through rys eyes</category>
+  <iop name="colorzones" version="6">
+    <params>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</params>
+  </iop>
+  <iop name="colorbalance" version="3">
+    <params>0 0 0 -0.30 -0.15 0 0 0 0</params>
+  </iop>
+  <iop name="tonecurve" version="2">
+    <params>0 0 64 58 128 128 192 198 255 255</params>
+  </iop>
+  <iop name="grain" version="3">
+    <params>0.10 0.25 0.50</params>
+  </iop>
+  <iop name="vignette" version="2">
+    <params>0.10 0.10 0.90 0.50</params>
+  </iop>
+  <iop name="saturation" version="1">
+    <params>-0.45</params>
+  </iop>
+</style>

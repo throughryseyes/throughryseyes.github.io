@@ -1,0 +1,30 @@
+<?xpacket begin='﻿' id='W5M0MpCehiHzreSzNTczkc9d'?>
+<x:xmpmeta xmlns:x='adobe:ns:meta/' x:xmptk='XMP Core 5.6'>
+ <rdf:RDF xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#'>
+  <rdf:Description
+    xmlns:crs='http://ns.adobe.com/camera-raw-settings/1.0/'
+    crs:PresetType='Normal'
+    crs:Cluster='Through Rys Eyes'
+    crs:PresetSortName='TRE Muted B&W Spice'
+    crs:SupportsAmount='True'
+    crs:UUID='TRE-MUTED-BW-SPICE-0001'
+    crs:ProcessVersion='11.0'
+    crs:Version='13.0'>
+    <crs:ToneCurveName2012>Medium Contrast</crs:ToneCurveName2012>
+    <crs:Contrast2012>15</crs:Contrast2012>
+    <crs:Highlights2012>-18</crs:Highlights2012>
+    <crs:Shadows2012>8</crs:Shadows2012>
+    <crs:Whites2012>4</crs:Whites2012>
+    <crs:Blacks2012>-10</crs:Blacks2012>
+    <crs:Dehaze>2</crs:Dehaze>
+    <crs:Clarity2012>5</crs:Clarity2012>
+    <crs:Vibrance>-30</crs:Vibrance>
+    <crs:Saturation>-45</crs:Saturation>
+    <crs:EnableGrain>true</crs:EnableGrain>
+    <crs:GrainAmount>10</crs:GrainAmount>
+    <crs:GrainSize>25</crs:GrainSize>
+    <crs:GrainFrequency>50</crs:GrainFrequency>
+  </rdf:Description>
+ </rdf:RDF>
+</x:xmpmeta>
+<?xpacket end='w'?>
